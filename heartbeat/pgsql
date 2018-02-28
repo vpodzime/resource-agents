@@ -2019,7 +2019,7 @@ check_stat_temp_directory() {
         exit $OCF_ERR_PERM
     fi
 
-    if ! chmod 750 "$stats_temp"; then
+    if ! chmod 700 "$stats_temp"; then
         ocf_log err "Can't change permissions for $stats_temp"
         exit $OCF_ERR_PERM
     fi
